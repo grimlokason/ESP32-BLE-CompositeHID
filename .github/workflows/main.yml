@@ -1,0 +1,24 @@
+name: Compile Sketches
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  compile-sketches:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # See: https://github.com/arduino/compile-sketches#readme
+      - name: Compile sketches
+        uses: arduino/compile-sketches@v1
+        with:
+          fqbn: esp32:esp32:esp32
+          sketch-paths: |
+            - examples/GamepadExamples/XboxXInputController/XboxXInputController.ino
+          libraries: |
+            - name: callback
+            - name: NimBLE-Arduino
