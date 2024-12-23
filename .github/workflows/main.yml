@@ -22,4 +22,4 @@ jobs:
           libraries: |
             - name: callback
             - name: NimBLE-Arduino
-            - local_path: .
+            - source-path: .
