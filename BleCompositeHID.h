@@ -19,7 +19,7 @@
 class BleCompositeHID
 {
 public:
-    BleCompositeHID(std::string deviceName = "ESP32 BLE Gamepad", std::string deviceManufacturer = "Espressif", uint8_t batteryLevel = 100);
+    BleCompositeHID(std::string deviceName = "ESP32 BLE Composite HID", std::string deviceManufacturer = "Espressif", uint8_t batteryLevel = 100);
     ~BleCompositeHID();
     void begin();
     void begin(const BLEHostConfiguration& config);
@@ -44,8 +44,8 @@ private:
     static void timedSendDeferredReports(void *pvParameter);
 
     BLEHostConfiguration _configuration;
-    BleConnectionStatus *_connectionStatus;
-    NimBLEHIDDevice *_hid;
+    BleConnectionStatus* _connectionStatus;
+    NimBLEHIDDevice* _hid;
 
     std::vector<BaseCompositeDevice*> _devices;
     SafeQueue<std::function<void()>> _deferredReports;
