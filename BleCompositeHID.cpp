@@ -61,7 +61,7 @@ BleCompositeHID::BleCompositeHID(std::string deviceName, std::string deviceManuf
     this->deviceName = deviceName.substr(0, CONFIG_BT_NIMBLE_GAP_DEVICE_NAME_MAX_LEN - 1);
     this->deviceManufacturer = deviceManufacturer;
     this->batteryLevel = batteryLevel;
-    this->_connectionStatus = new BleConnectionStatus();
+    this->_connectionStatus = new BleConnectionStatus();   
 }
 
 BleCompositeHID::~BleCompositeHID()
