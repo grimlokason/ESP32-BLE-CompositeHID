@@ -12,12 +12,10 @@
   "dependencies": [
     {
       "name": "NimBLE-Arduino",
-      "version": "2.5.1",
       "frameworks": "arduino"
     },
     {
       "name": "h2zero/esp-nimble-cpp",
-      "version": "^2.1.0",
       "frameworks": "espidf"
     }
   ]
