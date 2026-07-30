@@ -1,0 +1,24 @@
+{
+  "name": "ESP32-BLE-CompositeHID",
+  "version": "0.3.0",
+  "description": "...",
+  "keywords": "ble, hid, esp32",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grimlokason/ESP32-BLE-CompositeHID.git"
+  },
+  "frameworks": ["arduino", "espidf"],
+  "platforms": ["espressif32"],
+  "dependencies": [
+    {
+      "name": "NimBLE-Arduino",
+      "version": "^2.1.0",
+      "frameworks": "arduino"
+    },
+    {
+      "name": "h2zero/esp-nimble-cpp",
+      "version": "^2.1.0",
+      "frameworks": "espidf"
+    }
+  ]
+}
